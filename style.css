@@ -8,6 +8,10 @@ padding: 0;
     height: 100vh;
     width: 100%;
 background: linear-gradient(180deg, #2E335A 0%, #1C1B33 100%);
+
+overflow-x: hidden;
+overflow-y: hidden;
+
 }
 .image-div{
     background-repeat: no-repeat;
@@ -18,5 +22,56 @@ background: linear-gradient(180deg, #2E335A 0%, #1C1B33 100%);
     align-items: center;
     align-self: center;
     justify-content: center;
+        background: none;
+            position: relative;         
+    display: flex;
+    justify-content: center;
 
+
+}
+
+.main-img{
+        position: relative;      
+    display: flex;
+    justify-content: center;
+}
+
+
+.start-btn {
+    margin-top: 20px;
+    padding: 12px 40px;
+    background: #ffffff15;
+    border: 2px solid #ffffff40;
+    backdrop-filter: blur(8px);
+    color: white;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: relative;
+    right: 21%;
+    bottom: 40%;
+    margin-top:  30%;
+}
+
+.start-btn:hover {
+    background: #ffffff30;
+    transform: translateY(-3px);
+}
+
+
+
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+    .main-div {
+        height: auto;     /* NO full screen */
+        min-height: 100vh;
+    }
+
+    .image-div {
+        height: 80vh;     /* Perfect fit for laptops */
+        background-size: contain;   /* Image exactly fit hoti hai */
+        /* overflow-x: hidden; */
+/* overflow-y: hidden; */
+    }
 }

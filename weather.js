@@ -5,9 +5,12 @@ async function getWeather() {
         alert("Please enter a country name");
         return;
     }
-
-    const apiKey = "`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`";
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${apiKey}&units=metric`;
+    
+    // const apiKey = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
+    // const url = `https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${apiKey}&units=metric`;
+    let apiKey = "341637e84ecbcd5e3d35f6ed1f2f4677"
+let apiUrl= "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
+let url = `${apiUrl}${country}&appid=${apiKey}`;
 
     try {
         const response = await fetch(url);

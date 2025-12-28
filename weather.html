@@ -4,15 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Weather</title>
+    <style>
+      .image-div{
+        background-image: url(https://i2.pickpik.com/photos/664/982/351/rainbow-weather-sky-clouds-a38e3b1ce348924a31bb2af2815926e1.jpg);
+        background-size: cover;
+        height: 100vh;
+
+      }
+      .main-container{
+        background-color: brown;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        align-items: center;
+        align-self: first baseline;
+      }
+    </style>
 </head>
 
 <body>
+    <div class="image-div">
+        <div class="main-container">
     <h2>Search Country Weather</h2>
 
     <input type="text" id="countryInput" placeholder="Enter country name">
     <button onclick="getWeather()">Search</button>
 
     <div id="result"></div>
+    </div>
+    </div>
 
     <script src="weather.js"></script>
 </body>

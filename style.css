@@ -75,3 +75,19 @@ overflow-y: hidden;
 /* overflow-y: hidden; */
     }
 }
+/* Laptop */
+@media (min-width: 1024px) {
+    .start-btn {
+        position: relative;
+        right: 30%;
+        margin-top: 80%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .start-btn {
+        position: static;
+        margin-top: 20px;
+    }
+}

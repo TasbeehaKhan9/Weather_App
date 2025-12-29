@@ -4,36 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Weather</title>
-    <style>
-      .image-div{
-        background-image: url(https://i2.pickpik.com/photos/664/982/351/rainbow-weather-sky-clouds-a38e3b1ce348924a31bb2af2815926e1.jpg);
+ <style>
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+/* Background */
+.image-div {
+    background-image: url(https://i2.pickpik.com/photos/664/982/351/rainbow-weather-sky-clouds-a38e3b1ce348924a31bb2af2815926e1.jpg);
         background-size: cover;
         height: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-      }
-      .main-container{
-        background-color: brown;
-        display: flex;
-        justify-content: center;
-        justify-items: center;
-        justify-self: center;
-        align-items: center;
-        align-self: first baseline;
-      }
+/* Card */
+.main-container {
+    background: linear-gradient(135deg, #92c590, #abffab);
+    padding: 30px;
+    width: 350px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+.main-container h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Input */
+.main-container input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.main-container input:focus {
+    border-color: #6c63ff;
+}
+
+/* Button */
+.main-container button {
+    width: 100%;
+    padding: 12px;
+    background: #1e5e05;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.main-container button:hover {
+    background: #00bd29;
+}
+
+/* Result */
+#result {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #444;
+}
+
     </style>
 </head>
 
 <body>
-    <div class="image-div">
-        <div class="main-container">
-    <h2>Search Country Weather</h2>
+ <div class="image-div">
+    <div class="main-container">
+        <h2>Search Country Weather</h2>
+        <input 
+            type="text" id="countryInput"placeholder="Enter country name">
+        <div id="result"></div>
+        <button onclick="getWeather()">Search</button>
 
-    <input type="text" id="countryInput" placeholder="Enter country name">
-    <button onclick="getWeather()">Search</button>
 
-    <div id="result"></div>
     </div>
-    </div>
+</div>
 
     <script src="weather.js"></script>
 </body>
